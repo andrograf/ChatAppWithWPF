@@ -22,5 +22,10 @@ namespace ChatAppWithWPF
                 DragMove(); //ablak mozgatasa bal egergomb lenyomas eseten
             }
         }
+
+        private void ButtonMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.MainWindow.WindowState = WindowState.Minimized;
+        }
     }
 }
