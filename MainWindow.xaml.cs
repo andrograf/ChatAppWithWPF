@@ -38,5 +38,10 @@ namespace ChatAppWithWPF
             Application.Current.MainWindow.WindowState = WindowState.Normal;
 
         }
+
+        private void ButtonExit_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

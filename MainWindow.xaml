@@ -58,7 +58,8 @@
                             Background="Transparent"
                             BorderThickness="0"
                             Foreground="Gray"
-                            FontWeight="Bold"/>
+                            FontWeight="Bold"
+                            Click="ButtonExit_Click"/>
 
                 </StackPanel>
             </Grid>
