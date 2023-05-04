@@ -27,5 +27,16 @@ namespace ChatAppWithWPF
         {
             Application.Current.MainWindow.WindowState = WindowState.Minimized;
         }
+
+        private void ButtonMaximize_Click(object sender, RoutedEventArgs e)
+        {
+            if(Application.Current.MainWindow.WindowState != WindowState.Maximized )
+            {
+                Application.Current.MainWindow.WindowState = WindowState.Maximized;
+                return;
+            }
+            Application.Current.MainWindow.WindowState = WindowState.Normal;
+
+        }
     }
 }
