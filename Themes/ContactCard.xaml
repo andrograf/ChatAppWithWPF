@@ -11,8 +11,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ListViewItem">
-                    <Border Background="{TemplateBinding}"
-                            Height="20"
+                    <Border Background="{TemplateBinding Background}"
+                            Height="50"
                             CornerRadius="4"
                             Margin="8,2,8,2">
                         <StackPanel Orientation="Horizontal"
@@ -23,10 +23,10 @@
                                     CornerRadius="25"/>
                         
                             <StackPanel>
-                                <Label Content="{Binding userName}"
-                                        Background="White"/>
-                                <Label Content="{Binding lastMessage}"
-                                        Background="Gray"
+                                <Label Content="{Binding UserName}"
+                                        Foreground="White"/>
+                                <Label Content="{Binding LastMessage}"
+                                        Foreground="Gray"
                                         FontSize="10"/>
                             </StackPanel>
                         </StackPanel>
