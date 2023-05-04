@@ -3,10 +3,61 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ChatAppWithWPF"
+        xmlns:local="clr-namespace:ChatAppWithWPF" xmlns:model="clr-namespace:ChatAppWithWPF.MVVM.Model"
         mc:Ignorable="d"
-        Height="650" Width="1200">
+        Height="650" Width="1200"
+        Background="#36393f"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        ResizeMode="CanResizeWithGrip">
+    <Window.DataContext>
+        <model:MainViewModel/>
+    </Window.DataContext>
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/> 
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
 
+        <Border Grid.ColumnSpan="2"
+                Background="#252525">
+            <Grid HorizontalAlignment="Stretch">
+                <Label Content="GothemChat"
+                       Foreground="Gray"
+                       FontWeight="SemiBold"/>
+                <StackPanel HorizontalAlignment="Right"
+                            Orientation="Horizontal">
+                    <Button Width="20" 
+                            Height="20" 
+                            Content="▁"    
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Foreground="Gray"
+                            FontWeight="Bold"
+                            Padding="0,0,0,5"/>
+                    
+                    <Button Width="20" 
+                            Height="20" 
+                            Content="◻"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Foreground="Gray"
+                            FontWeight="ExtraBold"/>
+                    
+                    <Button Width="20" 
+                            Height="20" 
+                            Content="X"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Foreground="Gray"
+                            FontWeight="Bold"/>
+
+                </StackPanel>
+            </Grid>
+        </Border>
     </Grid>
 </Window>
