@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:ChatAppWithWPF" xmlns:model="clr-namespace:ChatAppWithWPF.MVVM.Model"
         mc:Ignorable="d"
         Height="650" Width="1200"
+        MinHeight="400" MinWidth="650"
         Background="#36393f"
         WindowStyle="None"
         AllowsTransparency="True"
@@ -129,10 +130,10 @@
                                RenderOptions.BitmapScalingMode="Fant"
                                Margin="5,0,5,0"
                                Source="./Icons/video-camera.png"/>
-                        <Image Width="20" Height="20"
+                        <!--<Image Width="20" Height="20"
                                RenderOptions.BitmapScalingMode="Fant"
                                Margin="5,0,5,0"
-                               Source="./Icons/video-camera.png"/>
+                               Source="./Icons/add-user.png"/>-->
                         <Image Width="20" Height="20"
                                RenderOptions.BitmapScalingMode="Fant"
                                Margin="5,0,5,0"
