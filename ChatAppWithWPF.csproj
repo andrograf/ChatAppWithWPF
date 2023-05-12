@@ -8,13 +8,27 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="MVVM\" />
-    <Folder Include="MVVM\Model\" />
+    <None Remove="Icons\send.png" />
+    <None Remove="Icons\telephone-call.png" />
+    <None Remove="Icons\video-camera.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Icons\send.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\telephone-call.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\video-camera.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="MVVM\ViewModel\" />
     <Folder Include="MVVM\View\" />
     <Folder Include="Core\" />
-    <Folder Include="Icons\" />
-    <Folder Include="Themes\" />
   </ItemGroup>
 
 </Project>
