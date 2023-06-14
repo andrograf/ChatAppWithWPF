@@ -24,6 +24,26 @@
                                     <KeyBinding Command="{Binding SendMessage}" Key="Return"/>
                                 </TextBox.InputBindings>
                             </TextBox>
+
+                            <TextBlock IsHitTestVisible="False"
+                                       Text="@Message"
+                                       HorizontalAlignment="Left"
+                                       VerticalAlignment="Center"
+                                       Foreground="DarkGray"
+                                       Margin="10,0,0,0">
+                                
+                                <TextBlock.Style>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="Visibility" Value="Collapsed"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Text, ElementName=MessageBox}" Value="">
+                                                <Setter Property="Visibility" Value="Visible"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                                
+                            </TextBlock>
                         </Grid>
                     </Border>
                 </ControlTemplate>
