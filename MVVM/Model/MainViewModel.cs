@@ -15,13 +15,24 @@ namespace ChatAppWithWPF.MVVM.Model
 
         /* Commands */
         public RelayCommand SendCommand { get; set; }
-        public ContactModel SelectedContact { get; set; }
+
+        private ContactModel _selectedContact;
+        public ContactModel SelectedContact 
+        { 
+            get => _selectedContact;
+            set 
+            { 
+                _selectedContact = value;
+                OnPropertyChanged();
+            }
+        }
+
         private string _message;
 
         public string Message
         {
             get { return _message; }
-            set 
+            set
             {
                 _message = value;
                 OnPropertyChanged();
@@ -29,7 +40,7 @@ namespace ChatAppWithWPF.MVVM.Model
         }
 
 
-        public MainViewModel() 
+        public MainViewModel()
         {
             Messages = new ObservableCollection<MessageModel>();
             Contacts = new ObservableCollection<ContactModel>();
