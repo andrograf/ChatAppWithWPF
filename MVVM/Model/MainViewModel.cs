@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ChatAppWithWPF.Core;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ChatAppWithWPF.MVVM.Model
 {
-    internal class MainViewModel
+    internal class MainViewModel : ObservableObject
     {
         public ObservableCollection<MessageModel> Messages { get; set; }
         public ObservableCollection<ContactModel> Contacts { get; set; }
@@ -19,7 +20,11 @@ namespace ChatAppWithWPF.MVVM.Model
         public string Message
         {
             get { return _message; }
-            set { _message = value; }
+            set 
+            {
+                _message = value;
+                OnPropertyChanged();
+            }
         }
 
 
