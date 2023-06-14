@@ -12,6 +12,12 @@ namespace ChatAppWithWPF.Core
         private Func<object, bool> _canExecuteChanged;
         private Action<object> _executeChanged;
 
+        public RelayCommand(Action<object> executeChanged,Func<object, bool> canExecuteChanged = null)
+        {
+            _canExecuteChanged = canExecuteChanged;
+            _executeChanged = executeChanged;
+        }
+
         public event EventHandler CanExecuteChanged
         {
             add { CommandManager.RequerySuggested += value; }

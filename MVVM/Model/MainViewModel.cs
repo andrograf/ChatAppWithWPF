@@ -14,6 +14,7 @@ namespace ChatAppWithWPF.MVVM.Model
         public ObservableCollection<ContactModel> Contacts { get; set; }
 
         /* Commands */
+        public RelayCommand SendCommand { get; set; }
         public ContactModel SelectedContact { get; set; }
         private string _message;
 
@@ -32,6 +33,16 @@ namespace ChatAppWithWPF.MVVM.Model
         {
             Messages = new ObservableCollection<MessageModel>();
             Contacts = new ObservableCollection<ContactModel>();
+            SendCommand = new RelayCommand(o =>
+            {
+                Messages.Add(new MessageModel()
+                {
+                    Message = Message,
+                    FirstMessage = false
+
+                });
+                Message = "";
+            });
 
             Messages.Add(new MessageModel
             {
